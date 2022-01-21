@@ -1,0 +1,19 @@
+.map {
+  margin-left: 30%;
+  margin-bottom: 10px;
+}
+
+.map > img {
+  width: 70%;
+  height: 70%;
+}
+.footer {
+  display: flex;
+}
+
+.location {
+  margin: 50px;
+}
+.contactno {
+  margin: 50px;
+}

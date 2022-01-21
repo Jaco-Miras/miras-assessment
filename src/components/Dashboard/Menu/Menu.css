@@ -1,0 +1,15 @@
+.banner {
+  margin-left: 150px;
+}
+
+.banner > h3 {
+  margin-left: -100px;
+}
+
+.animation {
+  margin-left: 30%;
+}
+
+.animation > h3 {
+  margin-left: -340px;
+}
