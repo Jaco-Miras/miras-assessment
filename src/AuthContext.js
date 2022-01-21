@@ -16,7 +16,7 @@ import React, {
 const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [admin, setAdmin] = useState(null);
+  // const [admin, setAdmin] = useState(null);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -28,15 +28,15 @@ export const AuthContextProvider = ({ children }) => {
     });
   }, []);
 
-  useEffect(() => {
-    onAuthStateChanged(auth, (admin) => {
-      if (admin) {
-        setAdmin(admin);
-      } else {
-        setAdmin(null);
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   onAuthStateChanged(auth, (admin) => {
+  //     if (admin) {
+  //       setAdmin(admin);
+  //     } else {
+  //       setAdmin(null);
+  //     }
+  //   });
+  // }, []);
 
   function login(email, password) {
     signInWithEmailAndPassword(auth, email, password)
@@ -61,7 +61,7 @@ export const AuthContextProvider = ({ children }) => {
       });
   }
   const payload = useMemo(() => ({ user, login, logout }), [user]);
-  const payload = useMemo(() => ({ admin, login, logout }), [admin]);
+  // const payload = useMemo(() => ({ admin, login, logout }), [admin]);
   return (
     <AuthContext.Provider value={payload}>{children}</AuthContext.Provider>
   );

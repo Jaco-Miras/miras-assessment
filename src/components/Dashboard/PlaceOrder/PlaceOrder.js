@@ -41,6 +41,7 @@ function PlaceOrder() {
             <label htmlFor="Total">Total Amount: </label>
             <input type="text" name="Total" placeholder="Total Amount" />
           </div>
+          <button>Place Order</button>
         </div>
       </form>
     </div>
