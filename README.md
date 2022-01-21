@@ -1,1 +1,2 @@
-# miras-assessment
+# npm start 
+To start the localhost server
